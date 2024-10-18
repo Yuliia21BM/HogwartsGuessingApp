@@ -15,13 +15,48 @@ The app includes:
 
 ## Screenshots
 
-![Home Dark Screen](./assets/images/readme/home-dark.png)
-![Home Light Screen](./assets/images/readme/home-light.png)
-![List Dark Screen](./assets/images/readme/list-dark.png)
-![List Light Screen](./assets/images/readme/list-light.png)
-![Details Dark Screen](./assets/images/readme/details-dark.png)
-![Details Light Screen](./assets/images/readme/details-light.png)
-![Details Dark No Access Screen](./assets/images/readme/details-dark-no-access.png)
+### Home Screens
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <div>
+    <img src="./assets/images/readme/home-dark.png" alt="Home Dark Screen" width="250" />
+    <p>Home Dark Screen</p>
+  </div>
+  <div>
+    <img src="./assets/images/readme/home-light.png" alt="Home Light Screen" width="250" />
+    <p>Home Light Screen</p>
+  </div>
+</div>
+
+### List Screens
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <div>
+    <img src="./assets/images/readme/list-dark.png" alt="List Dark Screen" width="250" />
+    <p>List Dark Screen</p>
+  </div>
+  <div>
+    <img src="./assets/images/readme/list-light.png" alt="List Light Screen" width="250" />
+    <p>List Light Screen</p>
+  </div>
+</div>
+
+### Details Screens
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <div>
+    <img src="./assets/images/readme/details-dark.png" alt="Details Dark Screen" width="250" />
+    <p>Details Dark Screen</p>
+  </div>
+  <div>
+    <img src="./assets/images/readme/details-light.png" alt="Details Light Screen" width="250" />
+    <p>Details Light Screen</p>
+  </div>
+  <div>
+    <img src="./assets/images/readme/details-dark-no-access.png" alt="Details Dark No Access Screen" width="250" />
+    <p>Details Dark No Access Screen</p>
+  </div>
+</div>
 
 ## Tech Stack
 
