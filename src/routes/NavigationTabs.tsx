@@ -79,7 +79,7 @@ export const NavigationTabs = (): React.ReactElement => {
             name="Home"
             component={HomeScreen}
             initialParams={{id: undefined}}
-            options={({navigation}) => ({
+            options={() => ({
               title: 'Home',
               headerRight: () => (
                 <View style={{paddingRight: 10}}>

@@ -47,7 +47,7 @@ import {commonColors, useAppTheme} from '../../utils/theme';
  */
 import {HomeScreenProps} from './types';
 
-export const HomeScreen: React.FC<HomeScreenProps> = ({route, navigation}) => {
+export const HomeScreen: React.FC<HomeScreenProps> = ({route}) => {
   const dispatch = useReduxDispatch();
   const randomCharacter = useReduxSelector(selectRandomCharacter);
   const [refreshing, setRefreshing] = useState(false);
@@ -88,7 +88,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({route, navigation}) => {
 
   useEffect(() => {
     if (route.params?.id) {
-      dispatch(setCharacterByIdAsRandom(route.params.id));
+      dispatch(setCharacterByIdAsRandom());
       dispatch(fetchCharacterById(route.params.id));
     } else {
       dispatch(fetchCharacters());

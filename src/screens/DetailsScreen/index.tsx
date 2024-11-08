@@ -11,7 +11,7 @@ import {DetailsCard} from '../../components/DetailsCard';
 /*
  *     STATE
  */
-import { useReduxDispatch, useReduxSelector } from '../../redux/store';
+import {useReduxDispatch, useReduxSelector} from '../../redux/store';
 import {fetchCharacterById} from '../../redux/characters/charactersOperations';
 import {
   selectCharacterDetails,
@@ -39,7 +39,7 @@ export const DetailsScreen: React.FC<DetailsScreenProps> = ({
 
   useEffect(() => {
     if (characterId) {
-      dispatch(setCharacterDetailsById(characterId));
+      dispatch(setCharacterDetailsById());
       dispatch(fetchCharacterById(characterId));
     }
   }, [characterId]);

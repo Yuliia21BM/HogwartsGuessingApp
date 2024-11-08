@@ -3,19 +3,11 @@
  */
 import React from 'react';
 /*
- *     STATE
- */
-import {useReduxDispatch} from '../../redux/store';
-/*
  *     COMPONENTS
  */
-import {View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {Text, TouchableRipple} from 'react-native-paper';
 import {HouseButton, HouseButtonProps} from './HouseButton';
-/*
- *     STYLING
- */
-import {useAppTheme} from '../../utils/theme';
 
 type HomeButtonsProps = {
   onButtonPress: (house: HouseButtonProps['house']) => void;
@@ -24,7 +16,6 @@ type HomeButtonsProps = {
 export const HomeButtons = ({
   onButtonPress,
 }: HomeButtonsProps): React.ReactElement => {
-  const dispatch = useReduxDispatch();
 
   return (
     <View style={styles.buttonsContainer}>

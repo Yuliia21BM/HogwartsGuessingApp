@@ -40,10 +40,10 @@ const charactersSlice = createSlice({
       state.successClicks = 0;
       state.failedClicks = 0;
     },
-    setCharacterDetailsById: (state, action: PayloadAction<string>) => {
+    setCharacterDetailsById: (state) => {
       state.characterDetails = null;
     },
-    setCharacterByIdAsRandom: (state, action: PayloadAction<string>) => {
+    setCharacterByIdAsRandom: (state) => {
       state.randomCharacter = null;
     },
   },

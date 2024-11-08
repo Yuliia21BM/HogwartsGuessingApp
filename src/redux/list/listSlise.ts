@@ -18,7 +18,7 @@ const listSlice = createSlice({
         existingRecord.attempts += 1;
         existingRecord.success = action.payload.success;
       } else {
-        state.guesses.push(action.payload);
+        state.guesses = [...state.guesses, action.payload]
       }
     },
     resetGuesses: state => {

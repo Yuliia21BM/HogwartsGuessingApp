@@ -18,7 +18,6 @@ import {ThemeChangeButton} from '../components/buttons/ThemeChangeButton';
  *     STYLING
  */
 import {commonColors} from '../utils/theme';
-import {Icon, IconButton} from 'react-native-paper';
 
 type StackParamList = {
   ListScreen: undefined;
@@ -33,7 +32,7 @@ export const ListStack = (): React.ReactElement => {
       <Stack.Screen
         name="ListScreen"
         component={ListScreen}
-        options={({navigation}) => ({
+        options={() => ({
           title: 'List',
           headerRight: () => <ResetButton />,
           headerLeft: () => <ThemeChangeButton />,
@@ -46,7 +45,7 @@ export const ListStack = (): React.ReactElement => {
       <Stack.Screen
         name="Details"
         component={DetailsScreen}
-        options={({navigation}) => ({
+        options={() => ({
           title: 'Details',
           tabBarStyle: {display: 'none'},
           headerStyle: {
