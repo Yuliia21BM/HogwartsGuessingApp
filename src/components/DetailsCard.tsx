@@ -182,7 +182,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
     borderColor: commonColors.gold,
-    overflow: 'hidden',
   },
   imageContainer: {
     position: 'relative',
