@@ -5,9 +5,10 @@ import React, {useState} from 'react';
 /*
  *     STATE
  */
-import {useReduxDispatch} from '../../redux/store';
+import {useReduxDispatch, useReduxSelector} from '../../redux/store';
 import {resetCounters} from '../../redux/characters/charactersSlice';
 import {resetGuesses} from '../../redux/list/listSlise';
+import {selectGuesses} from '../../redux/list/listSelectors';
 /*
  *     COMPONENTS
  */
@@ -22,6 +23,7 @@ export const ResetButton = (): React.ReactElement => {
   const [visible, setVisible] = useState(false);
   const {colors} = useAppTheme();
   const dispatch = useReduxDispatch();
+  const guesses = useReduxSelector(selectGuesses);
 
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
@@ -34,7 +36,11 @@ export const ResetButton = (): React.ReactElement => {
 
   return (
     <>
-      <Button mode="text" onPress={showDialog} textColor={colors.white}>
+      <Button
+        mode="text"
+        onPress={showDialog}
+        textColor={colors.white}
+        disabled={guesses.length <= 0}>
         Reset
       </Button>
 
