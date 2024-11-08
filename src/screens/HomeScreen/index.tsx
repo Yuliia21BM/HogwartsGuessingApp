@@ -133,8 +133,6 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({route, navigation}) => {
     dispatch(addGuess(newGuessRecord));
   };
 
-  console.log('isLoading', isLoading);
-
   return (
     <ScrollView
       contentContainerStyle={[
