@@ -7,7 +7,6 @@ import React, {useState} from 'react';
  */
 import {StyleSheet, View, FlatList, Image} from 'react-native';
 import {Text, TouchableRipple, Icon, IconButton} from 'react-native-paper';
-import {StackNavigationProp} from '@react-navigation/stack';
 import {Counters} from '../../components/Counters';
 import {Searchbar} from 'react-native-paper';
 import {getDefaultAvatars} from '../../utils';
@@ -107,13 +106,17 @@ export const ListScreen: React.FC<ListScreenProps> = ({navigation}) => {
         inputStyle={styles.searchInput}
       />
       <View style={{flex: 1}}>
-        <FlatList
-          data={filteredGuesses}
-          renderItem={renderItem}
-          keyExtractor={item => item.characterId}
-          style={styles.list}
-          contentContainerStyle={styles.listContainer}
-        />
+        {filteredGuesses.length > 0 ? (
+          <FlatList
+            data={filteredGuesses}
+            renderItem={renderItem}
+            keyExtractor={item => item.characterId}
+            style={styles.list}
+            contentContainerStyle={styles.listContainer}
+          />
+        ) : (
+          <Text style={styles.defaultText}>No guessed characters</Text>
+        )}
       </View>
     </View>
   );
@@ -136,6 +139,12 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     fontSize: 16,
+  },
+  defaultText: {
+    marginTop: 20,
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   guessItem: {
     marginVertical: 8,
